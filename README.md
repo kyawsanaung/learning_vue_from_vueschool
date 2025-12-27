@@ -1,1 +1,19 @@
 # learning_vue_from_vueschool
+
+This repository documents my progress learning Vue.js.
+
+## Goals
+- Understand Vue reactivity system
+- Learn SFC structure
+- Build small components and mini projects
+
+## Progress
+- ✅ Day 01: Vue SFC structure 
+- ⏳ Day 02: ref() vs reactive()
+- ⏳Day 03: computed & watch
+
+## Why this repo?
+I use this repository to:
+- Track daily learning
+- Practice real code
+- Build a strong foundation for full-stack development
