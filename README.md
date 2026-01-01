@@ -9,8 +9,8 @@ This repository documents my progress learning Vue.js.
 
 ## Progress
 - ✅ Day 01: Vue SFC structure 
-- ⏳ Day 02: ref() vs reactive()
-- ⏳Day 03: computed & watch
+- ✅ Day 02: Attribute bind and event handling
+- ⏳Day 03: Lists. Conditionals, and Computed 
 
 ## Why this repo?
 I use this repository to:
