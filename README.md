@@ -10,7 +10,8 @@ This repository documents my progress learning Vue.js.
 ## Progress
 - ✅ Day 01: Vue SFC structure 
 - ✅ Day 02: Attribute bind and event handling
-- ⏳Day 03: Lists. Conditionals, and Computed 
+- ✅ Day 03: Lists. Conditionals, and Computed 
+- ⏳ Day 04: First Custom Vue Component
 
 ## Why this repo?
 I use this repository to:
