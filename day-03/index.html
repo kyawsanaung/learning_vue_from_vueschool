@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists, Conditionals, Computed </title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="h-full grid place-items-center">
+    <!-- Define Assignment array and loop over in ul
+         Use Input Checkbox to track the status of the assignment
+         Use v-model to bind the checkbox to the assignment's status
+         Use v-show to conditionally display the section (completed or in progress)
+         Use computed properties to filter assignments based on their status -->
+
+    <div id="app" >
+        <section v-show="inProgressAssignments.length" class="mb-4">
+          <h2 class="font-bold text-xl">In progress</h2>
+          <ul>
+              <li v-for="assignment in inProgressAssignments">
+                  <label>{{assignment.title}}
+                    <input v-model="assignment.completed" type="checkbox" :key="assignment.id" >
+                  </label>               
+              </li>
+          </ul>
+        </section>
+
+        <section v-show="completedAssignments.length">
+          <h2 class="font-bold text-xl">Completed</h2>
+          <ul>
+              <li v-for="assignment in completedAssignments">
+                  <label>{{assignment.title}}
+                    <input v-model="assignment.completed" type="checkbox" :key="assignment.id" >
+                  </label>               
+              </li>
+          </ul>
+        </section>
+
+        <section>
+            <input type="text" placeholder="New Assignment" @keyup.enter="assignments.push({ id: assignments.length + 1, title: $event.target.value, completed: false }); $event.target.value = ''">
+            <button @click="saveInLocalStorage()">Save</button>
+        </section>
+
+        <pre>
+          {{ assignments }}
+        </pre>
+    </div>
+       
+
+         <script>
+         
+             let app = {
+              
+               data() {
+                 return {
+                   assignments: [
+                     { id: 1, title: "Assignment 1", completed: false },
+                     { id: 2, title: "Assignment 2", completed: false },
+                     { id: 3, title: "Assignment 3", completed: false }
+                   ]
+                 }
+               }  ,
+
+                computed: {
+                  inProgressAssignments () {
+                    return this.assignments.filter(assignment => !assignment.completed)
+                  },
+                  completedAssignments () {
+                    return this.assignments.filter(assignment => assignment.completed)
+                  }
+                } ,
+
+                methods: {
+                  saveInLocalStorage() {
+                    localStorage.setItem('assignments', JSON.stringify(this.assignments));
+                    Swal.fire('Saved!', 'Your assignments have been saved.', 'success');
+                  },
+                }
+            }
+            Vue.createApp(app).mount('#app');
+         </script>
+</body>
+</html>
