@@ -12,7 +12,7 @@ This repository documents my progress learning Vue.js.
 - ✅ Day 02: Attribute bind and event handling
 - ✅ Day 03: Lists. Conditionals, and Computed 
 - ✅ Day 04: Vue Dynamic Button & Processing State
-- ⏳ Day 05:
+- ✅ Day 05: Vue Assignment List
 
 ## Why this repo?
 I use this repository to:
