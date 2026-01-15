@@ -1,4 +1,4 @@
-# Day 05 - Parent–Child Communication in Vue 3
+# Day 06 - Parent–Child Communication in Vue 3
 
 ## What I Learned
 
