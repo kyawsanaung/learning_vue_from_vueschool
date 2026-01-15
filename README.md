@@ -13,6 +13,7 @@ This repository documents my progress learning Vue.js.
 - ✅ Day 03: Lists. Conditionals, and Computed 
 - ✅ Day 04: Vue Dynamic Button & Processing State
 - ✅ Day 05: Vue Assignment List
+- ✅ Day 06: Parent–Child Communication in Vue 3
 
 ## Why this repo?
 I use this repository to:
